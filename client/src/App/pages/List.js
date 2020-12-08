@@ -10,17 +10,13 @@ class List extends Component {
     }
   }
   
-  // Fetch the list on first mount
+  // Fetch the list 
   componentDidMount() {
-    this.getList();
+    fetch('http://localhost:8000/api/getList')
+    .then((res) => res.json())
+    .then(list => this.setState({ list }));
   }
-  
-  // Retrieves the list of items from the express app
-  getList = () => {
-    fetch('/api/getList')
-    .then(res => res.json())
-    .then(list => this.setState({ list }))
-  }
+
 
   render() {
     const { list } = this.state;
