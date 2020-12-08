@@ -1,1 +1,3 @@
-<h1 align="center">App to get an idea of how react and express connect to each other</h3>
+<h1>React.js + Express</h1>
+<h3>🚀 Learning how to connect the dots without create-react-app or express-generator 🚀</h3>
+

@@ -4,9 +4,10 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(express.static(path.join("..", __dirname, 'client/dist')));
+app.use(express.static(path.join("../", __dirname, 'client/dist')));
 app.use(cors);
 
+// An api endpoint that returns a short list of items
 app.get("/api/getList", (req, res) => {
   const list = ["item1", "item2", "item3"];
   res.json(list);
