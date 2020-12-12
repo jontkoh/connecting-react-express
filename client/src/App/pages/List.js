@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import { CenterContainer } from "../styles/centeredContainer";
+import {Title} from '../styles/title';
 
 class List extends Component {
   // initialize the state
@@ -23,10 +24,10 @@ class List extends Component {
 
     return(
       <div className="App">
-        <h1>List of Items</h1>
+        <Title>List of Items</Title>
         {/** Check to see if any items are found */}
         {list.length ? (
-          <div>
+          <CenterContainer>
             {/** Render the list of items */}
             {list.map((item) => {
               return(
@@ -35,11 +36,11 @@ class List extends Component {
                 </div>
               );
             })}
-          </div>
+          </CenterContainer>
         ) : (
-          <div>
+          <CenterContainer>
             <h2>No List Items Found</h2>
-          </div>
+          </CenterContainer>
         )
       }
       </div>
